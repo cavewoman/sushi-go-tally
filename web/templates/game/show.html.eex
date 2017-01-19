@@ -1,0 +1,33 @@
+<h2>Show game</h2>
+
+<ul>
+
+  <li>
+    <strong>Round1:</strong>
+    <%= @game.round1 %>
+  </li>
+
+  <li>
+    <strong>Round2:</strong>
+    <%= @game.round2 %>
+  </li>
+
+  <li>
+    <strong>Round3:</strong>
+    <%= @game.round3 %>
+  </li>
+
+  <li>
+    <strong>Pudding:</strong>
+    <%= @game.pudding %>
+  </li>
+
+  <li>
+    <strong>Winner:</strong>
+    <%= @game.winner %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: game_path(@conn, :edit, @game) %>
+<%= link "Back", to: game_path(@conn, :index) %>
