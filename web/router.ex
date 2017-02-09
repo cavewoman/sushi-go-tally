@@ -18,6 +18,7 @@ defmodule SushiGoTally.Router do
 
     resources "/games", GameController
     resources "/players", PlayerController
+    get "/player_games/new", PlayerGameController, :new
     get "/", PageController, :index
   end
 
