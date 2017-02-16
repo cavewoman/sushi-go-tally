@@ -1,6 +1,4 @@
-<h2>New game</h2>
-
-<h3>Add Players</h3>
+<h3>Select Players</h3>
 
 <%= render "form.html", changeset: @changeset,
                         players: @players,

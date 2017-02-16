@@ -17,6 +17,7 @@ defmodule SushiGoTally.Router do
     pipe_through :browser # Use the default browser stack
 
     resources "/games", GameController
+    get "/players/all", PlayerController, :all
     resources "/players", PlayerController
     get "/player_games/new", PlayerGameController, :new
     get "/", PageController, :index

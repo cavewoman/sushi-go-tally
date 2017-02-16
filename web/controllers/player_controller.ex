@@ -8,6 +8,11 @@ defmodule SushiGoTally.PlayerController do
     render(conn, "index.html", players: players)
   end
 
+  def all(conn, _params) do
+    players = Repo.all(from p in Player, preload: :games) |> Enum.map(&%{name: &1.name, id: &1.id})
+    json(conn, players);
+  end
+
   def new(conn, _params) do
     changeset = Player.changeset(%Player{})
     render(conn, "new.html", changeset: changeset)

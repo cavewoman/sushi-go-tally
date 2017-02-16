@@ -1,6 +1,7 @@
 defmodule SushiGoTally.Player do
   use SushiGoTally.Web, :model
 
+  @derive {Poison.Encoder, except: [:__meta__]}
   schema "players" do
     field :name, :string
     many_to_many :games, SushiGoTally.Game, join_through: "players_games"
